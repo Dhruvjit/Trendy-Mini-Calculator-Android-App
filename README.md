@@ -1,1 +1,1 @@
-# Trendy-Mini-Calculator-Android-App
+# Trendy-Calculator Android Kotlin App
