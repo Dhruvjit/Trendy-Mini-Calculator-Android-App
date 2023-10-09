@@ -9,19 +9,20 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvInput"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@color/bgTextField"
+        android:background="@color/bgLight2"
         android:padding="10dp"
         android:textSize="48sp"
-        android:text="@string/calc_text"
         android:gravity="end|bottom"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <!-- button 7 -->
         <android.widget.Button
@@ -72,7 +73,207 @@
             android:background="@drawable/calc_button"
             android:text="/"
             android:layout_margin="2dp"
+            android:onClick="onOperator"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!-- button 4 -->
+        <android.widget.Button
+            android:id="@+id/btnFour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="4"
+            android:layout_margin="2dp"
             android:onClick="onDigit"
+            />
+
+        <!-- button 5 -->
+        <android.widget.Button
+            android:id="@+id/btnFive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="5"
+            android:layout_margin="2dp"
+            android:onClick="onDigit"
+            />
+
+        <!-- button 6 -->
+        <android.widget.Button
+            android:id="@+id/btnSix"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="6"
+            android:layout_margin="2dp"
+            android:onClick="onDigit"
+            />
+
+        <!-- button * -->
+        <android.widget.Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="*"
+            android:layout_margin="2dp"
+            android:onClick="onOperator"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!-- button 1 -->
+        <android.widget.Button
+            android:id="@+id/btnOne"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="1"
+            android:layout_margin="2dp"
+            android:onClick="onDigit"
+            />
+
+        <!-- button 2 -->
+        <android.widget.Button
+            android:id="@+id/btnTwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="2"
+            android:layout_margin="2dp"
+            android:onClick="onDigit"
+            />
+
+        <!-- button 3 -->
+        <android.widget.Button
+            android:id="@+id/btnThree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="3"
+            android:layout_margin="2dp"
+            android:onClick="onDigit"
+            />
+
+        <!-- button subtract -->
+        <android.widget.Button
+            android:id="@+id/btnSubtract"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="-"
+            android:layout_margin="2dp"
+            android:onClick="onOperator"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!-- button dot -->
+        <android.widget.Button
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="."
+            android:layout_margin="2dp"
+            android:onClick="onDecimalPoint"
+            />
+
+        <!-- button 0 -->
+        <android.widget.Button
+            android:id="@+id/btnZero"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="0"
+            android:layout_margin="2dp"
+            android:onClick="onDigit"
+            />
+
+        <!-- button clr -->
+        <android.widget.Button
+            android:id="@+id/btnClr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="CLR"
+            android:layout_margin="2dp"
+            android:onClick="onClear"
+            />
+
+        <android.widget.Button
+            android:id="@+id/btnPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="+"
+            android:layout_margin="2dp"
+            android:onClick="onOperator"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!-- button equal -->
+        <android.widget.Button
+            android:id="@+id/btnEqual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:background="@drawable/calc_button"
+            android:text="="
+            android:layout_margin="2dp"
+            android:onClick="onDecimalPoint"
             />
 
     </LinearLayout>

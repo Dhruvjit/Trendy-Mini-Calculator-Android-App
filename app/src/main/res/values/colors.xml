@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bgLight">#fca311</color>
+    <color name="bgLight2">#ffc300</color>
     <color name="bgTextField">#e5e5e5</color>
     <color name="navyDarkBlue">#003566</color>
 </resources>
