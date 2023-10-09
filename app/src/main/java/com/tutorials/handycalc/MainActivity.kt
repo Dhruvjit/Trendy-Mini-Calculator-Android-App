@@ -37,6 +37,33 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun onEqual(view: View){
+        if(lastNumeric){
+            var tvValue = tvInput?.text.toString()
+            var prefix = ""
+            try{
+                if(tvValue.startsWith("-")){
+                    prefix = "-"
+                    /* convert -99 to 99, gets rid of - */
+                    tvValue = tvValue.substring(1)
+                }
+                if(tvValue.contains("-")){
+                    val splitValue = tvValue.split("-")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    if(prefix.isNotEmpty()){
+                        one = prefix + one
+                    }
+                    /* 99-1 -> [99,1] */
+                    val answer = one.toDouble() - two.toDouble()
+                    tvInput?.text = answer.toString()
+                }
+            }catch (e: ArithmeticException){
+                e.printStackTrace()
+            }
+        }
+    }
+
     fun onOperator(view: View){
         tvInput?.text?.let{
             if(lastNumeric && !isOperatorAdded(it.toString())){

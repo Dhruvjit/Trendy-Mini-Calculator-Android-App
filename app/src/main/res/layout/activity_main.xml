@@ -273,7 +273,7 @@
             android:background="@drawable/calc_button"
             android:text="="
             android:layout_margin="2dp"
-            android:onClick="onDecimalPoint"
+            android:onClick="onEqual"
             />
 
     </LinearLayout>
