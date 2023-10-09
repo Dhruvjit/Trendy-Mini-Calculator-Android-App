@@ -57,6 +57,36 @@ class MainActivity : AppCompatActivity() {
                     /* 99-1 -> [99,1] */
                     val answer = one.toDouble() - two.toDouble()
                     tvInput?.text = answer.toString()
+                }else if(tvValue.contains("+")){
+                    val splitValue = tvValue.split("+")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    if(prefix.isNotEmpty()){
+                        one = prefix + one
+                    }
+                    /* 99-1 -> [99,1] */
+                    val answer = one.toDouble() + two.toDouble()
+                    tvInput?.text = answer.toString()
+                }else if(tvValue.contains("*")){
+                    val splitValue = tvValue.split("*")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    if(prefix.isNotEmpty()){
+                        one = prefix + one
+                    }
+                    /* 99-1 -> [99,1] */
+                    val answer = one.toDouble() * two.toDouble()
+                    tvInput?.text = answer.toString()
+                } else if(tvValue.contains("/")){
+                    val splitValue = tvValue.split("/")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    if(prefix.isNotEmpty()){
+                        one = prefix + one
+                    }
+                    /* 99-1 -> [99,1] */
+                    val answer = one.toDouble() / two.toDouble()
+                    tvInput?.text = answer.toString()
                 }
             }catch (e: ArithmeticException){
                 e.printStackTrace()
